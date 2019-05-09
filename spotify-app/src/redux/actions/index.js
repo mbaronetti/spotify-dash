@@ -6,7 +6,8 @@ import {
     SEARCH_TERM,
     SET_ARTISTS,
     GET_NOW_PLAYING,
-    SET_NOW_PLAYING
+    SET_NOW_PLAYING,
+    LOADING_ARTISTS
 } from '../constants'
 import Spotify from 'spotify-web-api-js'
 
@@ -33,6 +34,13 @@ export const setNowPlaying = data => {
     }
 }
 
+export const loadingArtists = data => {
+    return {
+        type: LOADING_ARTISTS,
+        data,
+    }
+}
+
 export const getNowPlaying = () => {
     return dispatch => {
         spotifyApi.getMyCurrentPlaybackState().then(data => {
@@ -50,11 +58,13 @@ export const setArtists = data => {
 
 export const getArtists = name => {
     return dispatch => {
+        dispatch(loadingArtists(true))
         dispatch(onSearch(name))
         spotifyApi
-            .searchArtists(name.length > 0 ? name : ' ')
+            .searchArtists(name.length > 0 ? name : ' ' , {limit:25})
             .then(response => {
                 const artists = response.artists.items
+                dispatch(loadingArtists(false))
                 return dispatch(setArtists(artists))
             })
             .catch(e => console.log(e))

@@ -1,7 +1,6 @@
 @import '~antd/dist/antd.css';
 
 img{max-width: 100%}
-img{width: 100px}
 ul{
   list-style: none;
   padding: 0;
@@ -14,4 +13,14 @@ ul{
       opacity: 1;
     }
   }
+}
+.ant-layout-header{
+  height: auto;
+}
+.ant-card-meta-description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    left: 0;
 }

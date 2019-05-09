@@ -23,7 +23,7 @@ class Search extends Component {
         return (
             <div>
               <SearchInput onChange={this.props.onSearch}/>
-              <p>Showing results for:{this.props.searchTerm}</p>
+              <p style={{color: '#fff'}}>Showing results for:{this.props.searchTerm}</p>
             </div>
         )
     }

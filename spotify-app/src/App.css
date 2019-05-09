@@ -2,9 +2,6 @@
 img {
   max-width: 100%; }
 
-img {
-  width: 100px; }
-
 ul {
   list-style: none;
   padding: 0; }
@@ -15,5 +12,15 @@ ul {
     transition: all .25s ease; }
     ul li:hover {
       opacity: 1; }
+
+.ant-layout-header {
+  height: auto; }
+
+.ant-card-meta-description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  left: 0; }
 
 /*# sourceMappingURL=App.css.map */
