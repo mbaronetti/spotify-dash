@@ -1,0 +1,17 @@
+@import '~antd/dist/antd.css';
+
+img{max-width: 100%}
+img{width: 100px}
+ul{
+  list-style: none;
+  padding: 0;
+  li{
+    display: inline-block;
+    vertical-align: top;
+    opacity: 0.5;
+    transition: all .25s ease;
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
