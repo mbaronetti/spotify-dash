@@ -61,7 +61,7 @@ export const getArtists = name => {
         dispatch(loadingArtists(true))
         dispatch(onSearch(name))
         spotifyApi
-            .searchArtists(name.length > 0 ? name : ' ' , {limit:25})
+            .searchArtists(name.length > 0 ? name : ' ' , {limit:50})
             .then(response => {
                 const artists = response.artists.items
                 dispatch(loadingArtists(false))

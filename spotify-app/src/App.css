@@ -21,6 +21,10 @@ ul {
   bottom: 0;
   width: 100%;
   text-align: center;
-  left: 0; }
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 10px; }
 
 /*# sourceMappingURL=App.css.map */

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { NowPlayingComp } from './NowPlaying'
+import { NowPlayingComponent } from './NowPlayingComponent'
 import { getNowPlaying } from '../../redux/actions/index'
 
 const mapStateToProps = state => {
@@ -14,16 +14,16 @@ const mapDispatchToProps = dispatch => {
         getNowPlaying: data => dispatch(getNowPlaying()),
     }
 }
-class NowPlaying extends Component {
+class NowPlayingContainer extends Component {
     componentDidMount() {
         const { getNowPlaying } = this.props
-        setInterval(getNowPlaying, 1000)
+        setInterval(getNowPlaying, 2500)
     }
     render() {
         const { nowPlaying } = this.props
         if (nowPlaying)
             return (
-                <NowPlayingComp
+                <NowPlayingComponent
                     artist={nowPlaying.artists[0].name}
                     image={nowPlaying.album.images[0].url}
                     song={nowPlaying.name}
@@ -33,4 +33,4 @@ class NowPlaying extends Component {
     }
 }
 
-export default connect(mapStateToProps , mapDispatchToProps)(NowPlaying)
+export default connect(mapStateToProps , mapDispatchToProps)(NowPlayingContainer)

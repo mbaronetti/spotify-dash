@@ -18,7 +18,7 @@ const mapStateToProps = state => {
   }
 }
 
-class Search extends Component {
+class SearchContainer extends Component {
     render() {
         return (
             <div>
@@ -29,4 +29,4 @@ class Search extends Component {
     }
 }
 
-export default connect(mapStateToProps , mapDispatchToProps)(Search);
+export default connect(mapStateToProps , mapDispatchToProps)(SearchContainer);

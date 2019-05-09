@@ -1,7 +1,7 @@
 import React from 'react'
 import { Badge, Icon, Comment, Avatar } from 'antd'
 
-export const NowPlayingComp = props => {
+export const NowPlayingComponent = props => {
     return (
         <div>
             <Comment

@@ -4,7 +4,7 @@ import { Layout, Menu, Icon } from 'antd';
 const { SubMenu } = Menu;
 const { Sider } = Layout;
 
-export const Sidebar = props => {
+export const SidebarComponent = props => {
   return (
       <Sider width={props.width}>
         <Menu

@@ -23,4 +23,8 @@ ul{
     width: 100%;
     text-align: center;
     left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 10px;
 }

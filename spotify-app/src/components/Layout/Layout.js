@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout as AntLayout } from 'antd'
-import { Sidebar } from '../Sidebar/Sidebar'
+import { SidebarComponent } from '../Sidebar/SidebarComponent'
 const { Header, Content } = AntLayout
 
 export const Layout = props => {
@@ -11,7 +11,7 @@ export const Layout = props => {
             </Header>
             <AntLayout>
                 <AntLayout>
-                    <Sidebar />
+                    <SidebarComponent />
                     <Content className="content">{props.children}</Content>
                 </AntLayout>
             </AntLayout>

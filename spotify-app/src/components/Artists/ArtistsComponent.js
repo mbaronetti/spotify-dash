@@ -8,6 +8,9 @@ const cardStyle = {
     textAlign: 'center',
     margin: '1px',
 }
+const imgStyle = {
+    height: '150px',
+}
 
 export const ArtistsComponent = props => {
     const artists = props.artists
@@ -19,13 +22,12 @@ export const ArtistsComponent = props => {
                         <Card size="small" style={cardStyle} bordered={false}>
                             <Skeleton loading={props.loading}>
                                 <img
+                                    style={imgStyle}
                                     src={
                                         artist.images[0] && artist.images[0].url
                                     }
                                 />
-                                <Meta
-                                    description={artist.name}
-                                />
+                                <Meta description={artist.name} />
                             </Skeleton>
                         </Card>
                     </Col>

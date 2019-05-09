@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import Spotify from 'spotify-web-api-js'
 //import logo from "./logo.svg";
 import { Modal, Button } from 'antd'
-import Search from './components/Search/index'
+import SearchContainer from './components/Search/SearchContainer'
 import { Layout } from './components/Layout/Layout'
-import NowPlaying from './components/NowPlaying/index'
+import NowPlayingContainer from './components/NowPlaying/NowPlayingContainer'
 import ArtistsContainer from './components/Artists/ArtistsContainer'
 import { ArtistComponent } from './components/Artist/ArtistComponent'
 import { Col, Row} from 'antd'
@@ -53,8 +53,8 @@ class App extends Component {
         if (loggedIn)
             return (
                 <div className="App">
-                    <Layout header={<Search />}>
-                        <NowPlaying />
+                    <Layout header={<SearchContainer />}>
+                        <NowPlayingContainer />
                         <Row>
                             <Col xs={24}>
                                 <ArtistsContainer />
