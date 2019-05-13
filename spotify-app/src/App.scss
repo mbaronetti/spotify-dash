@@ -5,6 +5,117 @@ $green: #2ecc71;
 $blue: #3498db;
 $orange: #f1980f;
 
+body,
+main {
+    @extend .bg-dark-grey;
+}
+.spfy-app {
+    > .ant-layout {
+        width: 85%;
+    }
+    img {
+        max-width: 100%;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    .search-container {
+        width: 24%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 25px;
+    }
+    .ant-layout-header {
+        height: auto;
+        padding: 0 15px;
+    }
+    .ant-card-actions {
+        border-top: none;
+        background: none;
+    }
+    .ant-card-actions > li {
+        margin: 0;
+    }
+    aside {
+        width: 15%;
+        position: fixed;
+        right: 0;
+        height: 100%;
+        top: 0;
+        @extend .bg-dark-grey;
+    }
+    header {
+        p {
+            margin: 0;
+            line-height: initial;
+            height: initial;
+        }
+    }
+    .ant-card {
+        margin: 5px;
+        padding: 5px;
+        max-height: 85vh;
+        border: none;
+        overflow: auto;
+        @extend .bg-dark-grey;
+        outline: 1px solid #ffffff0d;
+        .ant-card-body {
+            padding: 5px;
+        }
+        .ant-card-actions > li > span > .anticon {
+            color: $orange;
+        }
+        .ant-card-head {
+            color: #aaa;
+            border: none;
+        }
+        .ant-card-meta-description,
+        .ant-card-meta-title {
+            color: #fff;
+            font-weight: 400;
+        }
+        .ant-card-meta-description {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #aaa;
+        }
+    }
+    .sidebar-container {
+        h4 {
+            color: #fff;
+        }
+    }
+    #logo {
+        display: inline-block;
+        width: 35px;
+        opacity: 0.5;
+    }
+    .sidebar-list {
+        padding: 0 15px;
+        font-size: 0.85em;
+        color: #aaa;
+        li {
+            margin: 4px 0;
+            span {
+                display: block;
+            }
+        }
+    }
+    .now-playing-container {
+        &,
+        * {
+            color: white;
+        }
+    }
+}
 .tomato {
     color: tomato;
 }
@@ -21,105 +132,6 @@ $orange: #f1980f;
     background-color: $darkGrey;
 }
 
-.App > .ant-layout {
-    width: 85%;
-}
-body,
-main {
-    @extend .bg-dark-grey;
-}
-img {
-    max-width: 100%;
-}
-ul {
-    list-style: none;
-    padding: 0;
-    li {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-}
-.search-container {
-    width: 24%;
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 25px;
-}
-.ant-layout-header {
-    height: auto;
-    padding: 0 15px;
-}
-.ant-card-actions {
-    border-top: none;
-    background: none;
-}
-.ant-card-actions > li {
-    margin: 0;
-}
-aside {
-    width: 15%;
-    position: fixed;
-    right: 0;
-    height: 100%;
-    top: 0;
-    @extend .bg-dark-grey;
-}
-header {
-    p {
-        margin: 0;
-        line-height: initial;
-        height: initial;
-    }
-}
-.ant-card-meta-description,
-.ant-card-meta-title {
-    color: #fff;
-    font-weight: 400;
-}
-.ant-card-meta-description {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: #aaa;
-}
-.ant-card {
-    margin: 5px;
-    max-height: 85vh;
-    border: none;
-    overflow: auto;
-    @extend .bg-dark-grey;
-    outline: 1px solid #ffffff0d;
-}
-.ant-card-body {
-    padding: 5px;
-}
-.sidebar-container {
-    h4{color: #fff}
-}
-#logo{
-  display: inline-block;
-  width: 35px;
-  opacity: .5;
-}
-.sidebar-list {
-    padding: 0 15px;
-    font-size: 0.75em;
-    color: #aaa;
-    li {
-        margin: 4px 0;
-        span {
-            display: block;
-        }
-    }
-}
-.ant-card-actions > li > span > .anticon {
-    color: $orange;
-}
-.ant-card-head {
-    color: #aaa;
-    border: none;
-}
 *::-webkit-scrollbar {
     width: 5px;
 }
@@ -131,10 +143,4 @@ header {
 *::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     outline: 1px solid slategrey;
-}
-.now-playing-container {
-    &,
-    * {
-        color: white;
-    }
 }

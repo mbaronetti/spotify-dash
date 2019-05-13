@@ -6,21 +6,19 @@ import { setCurrentArtist } from '../../redux/actions/index'
 const mapStateToProps = state => {
     return {
         artists: state.artists,
-        loadingArtists: state.loadingArtists
+        loadingArtists: state.loadingArtists,
     }
 }
 const mapDispatchToProps = dispatch => {
     return {
-      setCurrentArtist: index => dispatch(setCurrentArtist(index))
+        setCurrentArtist: index => dispatch(setCurrentArtist(index)),
     }
 }
 
-
 class ArtistsContainer extends Component {
-    componentDidMount() {
-    }
+    componentDidMount() {}
     render() {
-        const { artists , loadingArtists , setCurrentArtist} = this.props
+        const { artists, loadingArtists, setCurrentArtist } = this.props
         if (artists)
             return (
                 <ArtistsComponent
@@ -33,4 +31,7 @@ class ArtistsContainer extends Component {
     }
 }
 
-export default connect(mapStateToProps , mapDispatchToProps)(ArtistsContainer)
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(ArtistsContainer)

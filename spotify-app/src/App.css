@@ -1,4 +1,79 @@
 @import url(~antd/dist/antd.css);
+.spfy-app > .ant-layout {
+  width: 85%; }
+.spfy-app img {
+  max-width: 100%; }
+.spfy-app ul {
+  list-style: none;
+  padding: 0; }
+  .spfy-app ul li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+.spfy-app .search-container {
+  width: 24%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 25px; }
+.spfy-app .ant-layout-header {
+  height: auto;
+  padding: 0 15px; }
+.spfy-app .ant-card-actions {
+  border-top: none;
+  background: none; }
+.spfy-app .ant-card-actions > li {
+  margin: 0; }
+.spfy-app aside {
+  width: 15%;
+  position: fixed;
+  right: 0;
+  height: 100%;
+  top: 0; }
+.spfy-app header p {
+  margin: 0;
+  line-height: initial;
+  height: initial; }
+.spfy-app .ant-card {
+  margin: 5px;
+  padding: 5px;
+  max-height: 85vh;
+  border: none;
+  overflow: auto;
+  outline: 1px solid #ffffff0d; }
+  .spfy-app .ant-card .ant-card-body {
+    padding: 5px; }
+  .spfy-app .ant-card .ant-card-actions > li > span > .anticon {
+    color: #f1980f; }
+  .spfy-app .ant-card .ant-card-head {
+    color: #aaa;
+    border: none; }
+  .spfy-app .ant-card .ant-card-meta-description,
+  .spfy-app .ant-card .ant-card-meta-title {
+    color: #fff;
+    font-weight: 400; }
+  .spfy-app .ant-card .ant-card-meta-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #aaa; }
+.spfy-app .sidebar-container h4 {
+  color: #fff; }
+.spfy-app #logo {
+  display: inline-block;
+  width: 35px;
+  opacity: 0.5; }
+.spfy-app .sidebar-list {
+  padding: 0 15px;
+  font-size: 0.85em;
+  color: #aaa; }
+  .spfy-app .sidebar-list li {
+    margin: 4px 0; }
+    .spfy-app .sidebar-list li span {
+      display: block; }
+.spfy-app .now-playing-container,
+.spfy-app .now-playing-container * {
+  color: white; }
+
 .tomato {
   color: tomato; }
 
@@ -12,96 +87,8 @@
   background-color: #353b48; }
 
 .bg-dark-grey, body,
-main, aside, .ant-card {
+main, .spfy-app aside, .spfy-app .ant-card {
   background-color: #2f3640; }
-
-.App > .ant-layout {
-  width: 85%; }
-
-img {
-  max-width: 100%; }
-
-ul {
-  list-style: none;
-  padding: 0; }
-  ul li {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; }
-
-.search-container {
-  width: 24%;
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 25px; }
-
-.ant-layout-header {
-  height: auto;
-  padding: 0 15px; }
-
-.ant-card-actions {
-  border-top: none;
-  background: none; }
-
-.ant-card-actions > li {
-  margin: 0; }
-
-aside {
-  width: 15%;
-  position: fixed;
-  right: 0;
-  height: 100%;
-  top: 0; }
-
-header p {
-  margin: 0;
-  line-height: initial;
-  height: initial; }
-
-.ant-card-meta-description,
-.ant-card-meta-title {
-  color: #fff;
-  font-weight: 400; }
-
-.ant-card-meta-description {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: #aaa; }
-
-.ant-card {
-  margin: 5px;
-  max-height: 85vh;
-  border: none;
-  overflow: auto;
-  outline: 1px solid #ffffff0d; }
-
-.ant-card-body {
-  padding: 5px; }
-
-.sidebar-container h4 {
-  color: #fff; }
-
-#logo {
-  display: inline-block;
-  width: 35px;
-  opacity: .5; }
-
-.sidebar-list {
-  padding: 0 15px;
-  font-size: 0.75em;
-  color: #aaa; }
-  .sidebar-list li {
-    margin: 4px 0; }
-    .sidebar-list li span {
-      display: block; }
-
-.ant-card-actions > li > span > .anticon {
-  color: #f1980f; }
-
-.ant-card-head {
-  color: #aaa;
-  border: none; }
 
 *::-webkit-scrollbar {
   width: 5px; }
@@ -112,9 +99,5 @@ header p {
 *::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey; }
-
-.now-playing-container,
-.now-playing-container * {
-  color: white; }
 
 /*# sourceMappingURL=App.css.map */

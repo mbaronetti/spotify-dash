@@ -33,4 +33,7 @@ class NowPlayingContainer extends Component {
     }
 }
 
-export default connect(mapStateToProps , mapDispatchToProps)(NowPlayingContainer)
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(NowPlayingContainer)

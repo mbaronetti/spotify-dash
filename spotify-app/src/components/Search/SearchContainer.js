@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
 //import logo from "./logo.svg";
-import { Input, Radio } from 'antd'
+import { Input } from 'antd'
 import { connect } from 'react-redux'
 import {
     getArtists,
-    onSearch,
     setSearchType,
     getTracks,
     search,
 } from '../../redux/actions/index'
 
-const RadioGroup = Radio.Group
 const SearchInput = Input.Search
 
 const mapDispatchToProps = dispatch => {
@@ -32,10 +30,6 @@ const mapStateToProps = state => {
 class SearchContainer extends Component {
     render() {
         const {
-            searchType,
-            getArtists,
-            setSearchType,
-            getTracks,
             search,
             searchTerm,
         } = this.props

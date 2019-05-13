@@ -1,5 +1,5 @@
 import React from 'react'
-import { Badge, Icon, Comment, Avatar } from 'antd'
+import { Comment, Avatar } from 'antd'
 
 export const NowPlayingComponent = props => {
     return (

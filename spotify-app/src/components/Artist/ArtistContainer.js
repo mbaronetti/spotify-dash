@@ -4,19 +4,14 @@ import { ArtistComponent } from './ArtistComponent'
 
 const mapStateToProps = state => {
     return {
-        currentArtist: state.currentArtist
+        currentArtist: state.currentArtist,
     }
 }
 class ArtistContainer extends Component {
-    componentDidMount() {
-    }
+    componentDidMount() {}
     render() {
         const { currentArtist } = this.props
-        if (currentArtist)
-            return (
-                <ArtistComponent artist={currentArtist}
-                />
-            )
+        if (currentArtist) return <ArtistComponent artist={currentArtist} />
         return null
     }
 }

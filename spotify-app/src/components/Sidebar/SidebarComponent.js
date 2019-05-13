@@ -1,17 +1,12 @@
-import React from 'react';
-import { Layout, Menu, Icon } from 'antd';
+import React from 'react'
 import NowPlayingContainer from '../NowPlaying/NowPlayingContainer'
 import ListOrderedContainer from '../ListOrdered/ListOrderedContainer'
 
-const { SubMenu } = Menu;
-const { Sider } = Layout;
-
 export const SidebarComponent = props => {
-  return (
-      <aside>
-          <NowPlayingContainer />
-          <ListOrderedContainer />
-      </aside>
+    return (
+        <aside>
+            <NowPlayingContainer />
+            <ListOrderedContainer />
+        </aside>
     )
-
 }

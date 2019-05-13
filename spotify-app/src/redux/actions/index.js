@@ -1,18 +1,15 @@
 //ACTIONS
 import {
     SHOW_MODAL,
-    SET_DATA,
-    SET_IMAGES,
     SEARCH_TERM,
     SET_ARTISTS,
-    GET_NOW_PLAYING,
     SET_NOW_PLAYING,
     LOADING_ARTISTS,
     SET_CURRENT_ARTIST,
     SET_TOP_ARTISTS,
     SEARCH_TYPE,
     SET_TRACKS,
-    SET_NEW_RELEASES
+    SET_NEW_RELEASES,
 } from '../constants'
 import Spotify from 'spotify-web-api-js'
 
@@ -45,7 +42,6 @@ export const loadingArtists = data => {
         data,
     }
 }
-
 
 export const setArtists = data => {
     return {
@@ -97,9 +93,8 @@ export const getNowPlaying = () => {
 export const getNewReleases = () => {
     return dispatch => {
         spotifyApi
-            .getNewReleases({limit:10})
+            .getNewReleases({ limit: 10 })
             .then(data => {
-                console.log(data);
                 return dispatch(setNewReleases(data.albums))
             })
             .catch(e => console.log(e))
@@ -111,7 +106,7 @@ export const getArtists = name => {
         dispatch(loadingArtists(true))
         dispatch(onSearch(name))
         spotifyApi
-            .searchArtists(name.length > 0 ? name : ' ' , {limit:50})
+            .searchArtists(name.length > 0 ? name : ' ', { limit: 50 })
             .then(response => {
                 const artists = response.artists.items
                 dispatch(loadingArtists(false))
@@ -126,7 +121,7 @@ export const getTracks = name => {
     return dispatch => {
         dispatch(onSearch(name))
         spotifyApi
-            .searchTracks(name.length > 0 ? name : ' ' , {limit:50})
+            .searchTracks(name.length > 0 ? name : ' ', { limit: 50 })
             .then(response => {
                 return dispatch(setTracks(response.tracks.items))
             })
@@ -136,8 +131,7 @@ export const getTracks = name => {
 
 export const search = name => {
     return dispatch => {
-    dispatch(getArtists(name))
+        dispatch(getArtists(name))
         dispatch(getTracks(name))
-
     }
 }

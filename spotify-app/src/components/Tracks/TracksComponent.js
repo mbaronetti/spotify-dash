@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Col, Row, Skeleton, Avatar, Icon } from 'antd'
+import { Card, Col, Row, Skeleton } from 'antd'
 
 const { Meta } = Card
 
@@ -10,11 +10,7 @@ export const TracksComponent = props => {
             <Row>
                 {tracks.map((track, index) => (
                     <Col xs={24} key={index}>
-                        <Card
-                            size="small"
-                            data-key={index}
-                            bordered={false}
-                        >
+                        <Card size="small" data-key={index} bordered={false}>
                             <Skeleton loading={props.loading}>
                                 <Meta
                                     title={track.name}
@@ -33,5 +29,5 @@ export const TracksComponent = props => {
                 ))}
             </Row>
         )
-        return null
+    return null
 }

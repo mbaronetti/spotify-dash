@@ -11,5 +11,5 @@ export const getHashParams = () => {
 }
 
 export const redirectToAuth = val => {
-  if(val) window.location = 'http://localhost:8888'
+    if (val) window.location = 'http://localhost:8888'
 }

@@ -9,7 +9,7 @@ import {
     SET_TOP_ARTISTS,
     SEARCH_TYPE,
     SET_TRACKS,
-    SET_NEW_RELEASES
+    SET_NEW_RELEASES,
 } from '../constants'
 
 const initialState = {
@@ -51,8 +51,8 @@ const rootReducer = (state = initialState, action) => {
     if (action.type === SET_TRACKS) {
         return { ...state, tracks: action.data }
     }
-    if(action.type === SET_NEW_RELEASES){
-      return { ...state, releases: action.data }
+    if (action.type === SET_NEW_RELEASES) {
+        return { ...state, releases: action.data }
     }
     return state
 }

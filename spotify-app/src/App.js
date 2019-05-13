@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import Spotify from 'spotify-web-api-js'
-import logo from "./media/logo.png";
-import people from "./media/people.png";
-import { Modal, Button, Empty, Card } from 'antd'
+import logo from './media/logo.png'
+import people from './media/people.png'
+import { Empty, Card } from 'antd'
 import SearchContainer from './components/Search/SearchContainer'
 import { Layout } from './components/Layout/Layout'
-import NowPlayingContainer from './components/NowPlaying/NowPlayingContainer'
 import ArtistContainer from './components/Artist/ArtistContainer'
 import ArtistsContainer from './components/Artists/ArtistsContainer'
 import TracksContainer from './components/Tracks/TracksContainer'
@@ -39,10 +38,6 @@ const loggedIn = params.access_token ? true : false
 const accessToken = params.access_token ? params.access_token : ''
 
 class App extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     componentDidMount() {
         if (loggedIn) {
             spotifyApi.setAccessToken(accessToken)
@@ -51,11 +46,18 @@ class App extends Component {
         }
     }
     render() {
-        const { modalVisible, showModal, artists, tracks } = this.props
+        const { artists } = this.props
         if (loggedIn)
             return (
-                <div className="App">
-                    <Layout header={<span><img src={logo} alt="logo" id="logo"/><SearchContainer /></span>}>
+                <div className="App spfy-app">
+                    <Layout
+                        header={
+                            <span>
+                                <img src={logo} alt="logo" id="logo" />
+                                <SearchContainer />
+                            </span>
+                        }
+                    >
                         {artists && artists.length > 0 ? (
                             <Row>
                                 <Col xs={24} md={6}>
@@ -77,15 +79,20 @@ class App extends Component {
                                 image={people}
                                 imageStyle={{
                                     height: 'initial',
-                                    opacity: '.25'
+                                    opacity: '.25',
+                                    marginTop: '100px',
                                 }}
                                 description={
-                                    <span style={{ color: '#fff', opacity: '.15' }}>
+                                    <span
+                                        style={{
+                                            color: '#fff',
+                                            opacity: '.15',
+                                        }}
+                                    >
                                         No data to display
                                     </span>
                                 }
-                            >
-                            </Empty>
+                            />
                         )}
                     </Layout>
                 </div>
