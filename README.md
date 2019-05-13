@@ -7,7 +7,7 @@ There are two parts to it, the auth-server, and the client.
 For authentication, "web-api-auth-examples" package was used.
 https://github.com/spotify/web-api-auth-examples
 
-## Getting Started
+## How to use
 
 ### 1) Set Up
 - Download this project
