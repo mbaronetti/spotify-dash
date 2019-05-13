@@ -46,7 +46,7 @@ class App extends Component {
         }
     }
     render() {
-        const { artists } = this.props
+        const { artists, tracks } = this.props
         if (loggedIn)
             return (
                 <div className="App spfy-app">
@@ -58,7 +58,7 @@ class App extends Component {
                             </span>
                         }
                     >
-                        {artists && artists.length > 0 ? (
+                        {artists || tracks ? (
                             <Row>
                                 <Col xs={24} md={6}>
                                     <Card title="Tracks">
@@ -79,7 +79,7 @@ class App extends Component {
                                 image={people}
                                 imageStyle={{
                                     height: 'initial',
-                                    opacity: '.25'
+                                    opacity: '.25',
                                 }}
                                 description={
                                     <span
