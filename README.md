@@ -4,7 +4,7 @@ It renders a list of artists and tracks based on user's input, along with custom
 
 There are two parts to it, the auth-server, and the client.
 
-For authentication, "web-api-auth-examples" package was used.
+For authentication, "web-api-auth-examples" was used.
 https://github.com/spotify/web-api-auth-examples
 
 ## How to use
