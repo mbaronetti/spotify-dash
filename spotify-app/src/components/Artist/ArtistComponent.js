@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from 'antd'
+import { Card, Progress } from 'antd'
 import imgPlaceholder from '../../media/placeholder.gif'
 
 const { Meta } = Card
@@ -36,6 +36,18 @@ export const ArtistComponent = props => {
                             >
                                 {artist.followers.total}
                             </span>
+                        </li>
+                        <li>
+                            <div>Popularity</div>
+                            <Progress
+                                strokeColor={{
+                                    from: '#2f3640',
+                                    to: '#3498db',
+                                }}
+                                size='small'
+                                percent={artist.popularity}
+                                status="active"
+                            />
                         </li>
                     </ul>
                 }

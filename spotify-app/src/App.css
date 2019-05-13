@@ -23,6 +23,8 @@
   background: none; }
 .spfy-app .ant-card-actions > li {
   margin: 0; }
+.spfy-app .ant-progress-text {
+  color: #aaa; }
 .spfy-app aside {
   width: 15%;
   position: fixed;

@@ -79,8 +79,7 @@ class App extends Component {
                                 image={people}
                                 imageStyle={{
                                     height: 'initial',
-                                    opacity: '.25',
-                                    marginTop: '100px',
+                                    opacity: '.25'
                                 }}
                                 description={
                                     <span
