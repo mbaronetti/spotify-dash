@@ -1,6 +1,6 @@
 # INTRO
 This is a simple and easy-to-use React & Redux application to navigate through users and tracks using Spotify's API.
-It renders a list of artists and tracks based on user's input, along with custom information such as User's Currently Playing Track'
+It renders a list of artists and tracks based on user's input, along with custom information such as 'User's Currently Playing Track'
 
 There are two parts to it, the auth-server, and the client.
 
@@ -33,6 +33,7 @@ https://github.com/spotify/web-api-auth-examples
 ### 4)  Run App
 - Visit http://localhost:3000
 - Click 'Log in with Spotify' and log in
+- To see 'User's Currently Playing Track' in action, open Spotify and play a song.
 - Enjoy!
 
 ![alt text](https://github.com/mbaronetti/spotify-dash/blob/master/preview.png "Preview")
