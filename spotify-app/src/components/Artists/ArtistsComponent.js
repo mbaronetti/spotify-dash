@@ -1,33 +1,40 @@
 import React from 'react'
-import { Card, Col, Row, Skeleton } from 'antd'
+import { Card, Col, Row, Skeleton, Avatar, Icon } from 'antd'
 
 const { Meta } = Card
-
-const cardStyle = {
-    height: '180px',
-    textAlign: 'center',
-    margin: '1px',
-}
-const imgStyle = {
-    height: '150px',
-}
 
 export const ArtistsComponent = props => {
     const artists = props.artists
     if (artists)
         return (
             <Row>
-                {artists.map(artist => (
-                    <Col xs={24} sm={16} md={3}>
-                        <Card size="small" style={cardStyle} bordered={false}>
+                {artists.map((artist, index) => (
+                    <Col xs={24} sm={16} md={6} key={index}>
+                        <Card
+                            size="small"
+                            data-key={index}
+                            bordered={true}
+                            actions={[
+                                <Icon size="small" type="eye" onClick={() => props.setCurrentArtist(artist)}/>,
+                            ]}
+                        >
                             <Skeleton loading={props.loading}>
-                                <img
-                                    style={imgStyle}
-                                    src={
-                                        artist.images[0] && artist.images[0].url
+                                <Meta
+                                    avatar={
+                                        <Avatar
+                                            src={
+                                                artist.images[0] &&
+                                                artist.images[0].url
+                                            }
+                                        />
+                                    }
+                                    title={artist.name}
+                                    description={
+                                        artist.genres[0]
+                                            ? artist.genres[0]
+                                            : 'N/A'
                                     }
                                 />
-                                <Meta description={artist.name} />
                             </Skeleton>
                         </Card>
                     </Col>

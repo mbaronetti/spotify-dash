@@ -6,16 +6,12 @@ export const NowPlayingComponent = props => {
         <div>
             <Comment
                 author={props.artist}
-                avatar={
-                    <Avatar
-                        src={props.image}
-                        alt="Album"
-                    />
-                }
+                avatar={<Avatar src={props.image} alt="Album" />}
                 content={
-                    <p>
-                        {props.song}
-                    </p>
+                    <div>
+                        <p>{props.song}</p>
+                        <a href="#">Details...</a>
+                    </div>
                 }
             />
         </div>

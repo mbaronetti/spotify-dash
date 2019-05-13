@@ -6,7 +6,7 @@ const { Header, Content } = AntLayout
 export const Layout = props => {
     return (
         <AntLayout>
-            <Header>
+            <Header className="bg-dark-grey">
                 {props.header}
             </Header>
             <AntLayout>

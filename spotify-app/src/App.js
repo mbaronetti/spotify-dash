@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import Spotify from 'spotify-web-api-js'
 //import logo from "./logo.svg";
-import { Modal, Button } from 'antd'
+import { Modal, Button , Empty } from 'antd'
 import SearchContainer from './components/Search/SearchContainer'
 import { Layout } from './components/Layout/Layout'
 import NowPlayingContainer from './components/NowPlaying/NowPlayingContainer'
 import ArtistsContainer from './components/Artists/ArtistsContainer'
-import { ArtistComponent } from './components/Artist/ArtistComponent'
+import ArtistContainer from './components/Artist/ArtistContainer'
 import { Col, Row} from 'antd'
 import { connect } from 'react-redux'
 import { getHashParams, redirectToAuth } from './components/Helpers'
-import { showModal, getArtists, getNowPlaying } from './redux/actions/index'
+import { showModal, getArtists, getNowPlaying} from './redux/actions/index'
 import './App.css'
 
 const spotifyApi = new Spotify()
@@ -19,7 +19,7 @@ const mapDispatchToProps = dispatch => {
     return {
         showModal: val => dispatch(showModal(val)),
         getArtists: name => dispatch(getArtists(name)),
-        getNowPlaying: data => dispatch(getNowPlaying()),
+        getNowPlaying: data => dispatch(getNowPlaying())
     }
 }
 
@@ -47,19 +47,23 @@ class App extends Component {
             redirectToAuth(true)
         }
     }
-
     render() {
         const { modalVisible, showModal, artists } = this.props
         if (loggedIn)
             return (
                 <div className="App">
                     <Layout header={<SearchContainer />}>
-                        <NowPlayingContainer />
-                        <Row>
-                            <Col xs={24}>
-                                <ArtistsContainer />
+                        {artists && artists.length > 0?<Row>
+                            <Col xs={24} md={6}>
+                                <ArtistContainer />
                             </Col>
+                                <Col xs={24} md={18}>
+                                    <ArtistsContainer/>
+                                </Col>
                         </Row>
+                        :
+                        <Empty />
+                        }
                     </Layout>
                 </div>
             )

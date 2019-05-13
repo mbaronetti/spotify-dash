@@ -1,4 +1,13 @@
 @import url(~antd/dist/antd.css);
+.bg-grey {
+  background-color: #353b48; }
+
+.bg-dark-grey, aside {
+  background-color: #2f3640; }
+
+.App > .ant-layout {
+  width: 85%; }
+
 img {
   max-width: 100%; }
 
@@ -9,22 +18,31 @@ ul {
     display: inline-block;
     vertical-align: top;
     opacity: 0.5;
-    transition: all .25s ease; }
+    transition: all 0.25s ease; }
     ul li:hover {
       opacity: 1; }
 
 .ant-layout-header {
   height: auto; }
 
+.ant-card-actions > li {
+  margin: 0; }
+
+aside {
+  width: 15%;
+  position: fixed;
+  right: 0;
+  height: 100%;
+  top: 0; }
+
+header p {
+  margin: 0;
+  line-height: initial;
+  height: initial; }
+
 .ant-card-meta-description {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  left: 0;
-  overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
-  padding: 0 10px; }
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 /*# sourceMappingURL=App.css.map */

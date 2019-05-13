@@ -17,6 +17,7 @@ const mapDispatchToProps = dispatch => {
 class NowPlayingContainer extends Component {
     componentDidMount() {
         const { getNowPlaying } = this.props
+        getNowPlaying()
         setInterval(getNowPlaying, 2500)
     }
     render() {
