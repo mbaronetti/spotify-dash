@@ -117,19 +117,19 @@ main {
     }
 }
 .tomato {
-    color: tomato;
+    color: tomato!important;
 }
 .green {
-    color: $green;
+    color: $green!important;
 }
 .blue {
-    color: $blue;
+    color: $blue!important;
 }
 .bg-grey {
-    background-color: $grey;
+    background-color: $grey!important;
 }
 .bg-dark-grey {
-    background-color: $darkGrey;
+    background-color: $darkGrey!important;
 }
 
 *::-webkit-scrollbar {

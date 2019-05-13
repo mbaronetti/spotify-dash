@@ -77,20 +77,20 @@
   color: white; }
 
 .tomato {
-  color: tomato; }
+  color: tomato !important; }
 
 .green {
-  color: #2ecc71; }
+  color: #2ecc71 !important; }
 
 .blue {
-  color: #3498db; }
+  color: #3498db !important; }
 
 .bg-grey {
-  background-color: #353b48; }
+  background-color: #353b48 !important; }
 
 .bg-dark-grey, body,
 main, .spfy-app aside, .spfy-app .ant-card {
-  background-color: #2f3640; }
+  background-color: #2f3640 !important; }
 
 *::-webkit-scrollbar {
   width: 5px; }

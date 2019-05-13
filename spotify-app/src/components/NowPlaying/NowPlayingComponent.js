@@ -10,7 +10,7 @@ export const NowPlayingComponent = props => {
                 avatar={<Avatar src={props.image} alt="Album" />}
                 content={
                     <div>
-                        <p>{props.song}</p>
+                        <p className="green">{props.song}</p>
                     </div>
                 }
             />
