@@ -14,7 +14,7 @@ class ArtistContainer extends Component {
         const { currentArtist } = this.props
         if (currentArtist)
             return (
-                <ArtistComponent cover={currentArtist.images[0] && currentArtist.images[0].url}
+                <ArtistComponent artist={currentArtist}
                 />
             )
         return null

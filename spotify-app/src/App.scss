@@ -1,7 +1,18 @@
 @import '~antd/dist/antd.css';
 $darkGrey: #2f3640;
 $grey: #353b48;
+$green: #2ecc71;
+$blue: #3498db;
 
+.tomato {
+    color: tomato;
+}
+.green {
+    color: $green;
+}
+.blue {
+    color: $blue;
+}
 .bg-grey {
     background-color: $grey;
 }
@@ -12,6 +23,10 @@ $grey: #353b48;
 .App > .ant-layout {
     width: 85%;
 }
+body,
+main {
+    @extend .bg-dark-grey;
+}
 img {
     max-width: 100%;
 }
@@ -19,13 +34,9 @@ ul {
     list-style: none;
     padding: 0;
     li {
-        display: inline-block;
-        vertical-align: top;
-        opacity: 0.5;
-        transition: all 0.25s ease;
-        &:hover {
-            opacity: 1;
-        }
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 .ant-layout-header {
@@ -42,15 +53,40 @@ aside {
     top: 0;
     @extend .bg-dark-grey;
 }
-header{
-  p{
-    margin: 0;
-    line-height: initial;
-    height: initial;
-  }
+header {
+    p {
+        margin: 0;
+        line-height: initial;
+        height: initial;
+    }
 }
-.ant-card-meta-description{
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.ant-card-meta-description {
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ant-card {
+    margin: 5px;
+    max-height: 85vh;
+    overflow: auto;
+}
+.ant-card-body {
+    padding: 5px;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+.now-playing-container{
+  &,*{color: white}
 }

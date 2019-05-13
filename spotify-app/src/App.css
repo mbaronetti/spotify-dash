@@ -1,8 +1,18 @@
 @import url(~antd/dist/antd.css);
+.tomato {
+  color: tomato; }
+
+.green {
+  color: #2ecc71; }
+
+.blue {
+  color: #3498db; }
+
 .bg-grey {
   background-color: #353b48; }
 
-.bg-dark-grey, aside {
+.bg-dark-grey, body,
+main, aside {
   background-color: #2f3640; }
 
 .App > .ant-layout {
@@ -15,12 +25,9 @@ ul {
   list-style: none;
   padding: 0; }
   ul li {
-    display: inline-block;
-    vertical-align: top;
-    opacity: 0.5;
-    transition: all 0.25s ease; }
-    ul li:hover {
-      opacity: 1; }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
 
 .ant-layout-header {
   height: auto; }
@@ -41,8 +48,30 @@ header p {
   height: initial; }
 
 .ant-card-meta-description {
+  font-size: 0.9em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
+
+.ant-card {
+  margin: 5px;
+  max-height: 85vh;
+  overflow: auto; }
+
+.ant-card-body {
+  padding: 5px; }
+
+*::-webkit-scrollbar {
+  width: 5px; }
+
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+
+*::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey; }
+
+.now-playing-container, .now-playing-container * {
+  color: white; }
 
 /*# sourceMappingURL=App.css.map */

@@ -10,7 +10,9 @@ import {
     LOADING_ARTISTS,
     SET_CURRENT_ARTIST,
     SET_TOP_ARTISTS,
-    SEARCH_TYPE
+    SEARCH_TYPE,
+    SET_TRACKS,
+    SET_NEW_RELEASES
 } from '../constants'
 import Spotify from 'spotify-web-api-js'
 
@@ -51,6 +53,12 @@ export const setArtists = data => {
         data,
     }
 }
+export const setTracks = data => {
+    return {
+        type: SET_TRACKS,
+        data,
+    }
+}
 
 export const setCurrentArtist = data => {
     return {
@@ -67,27 +75,32 @@ export const setTopArtists = data => {
 }
 
 export const setSearchType = data => {
-  console.log('radio checked', data);
     return {
         type: SEARCH_TYPE,
+        data,
+    }
+}
+export const setNewReleases = data => {
+    return {
+        type: SET_NEW_RELEASES,
         data,
     }
 }
 
 export const getNowPlaying = () => {
     return dispatch => {
-        spotifyApi.getMyCurrentPlaybackState().then(data => {
+        spotifyApi.getMyCurrentPlayingTrack().then(data => {
             return dispatch(setNowPlaying(data.item))
         })
     }
 }
-export const getTopArtists = () => {
+export const getNewReleases = () => {
     return dispatch => {
         spotifyApi
-            .getMyTopArtists()
-            .then(response => {
-                console.log(response);
-                dispatch(setTopArtists(response))
+            .getNewReleases()
+            .then(data => {
+                console.log(data);
+                return dispatch(setNewReleases(data.albums))
             })
             .catch(e => console.log(e))
     }
@@ -115,9 +128,16 @@ export const getTracks = name => {
         spotifyApi
             .searchTracks(name.length > 0 ? name : ' ' , {limit:50})
             .then(response => {
-                console.log(response)
-                return dispatch(setArtists(response.tracks.items))
+                return dispatch(setTracks(response.tracks.items))
             })
             .catch(e => console.log(e))
+    }
+}
+
+export const search = name => {
+    return dispatch => {
+    dispatch(getArtists(name))
+        dispatch(getTracks(name))
+
     }
 }

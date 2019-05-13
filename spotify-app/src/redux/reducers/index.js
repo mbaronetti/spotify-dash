@@ -7,13 +7,15 @@ import {
     LOADING_ARTISTS,
     SET_CURRENT_ARTIST,
     SET_TOP_ARTISTS,
-    SEARCH_TYPE
+    SEARCH_TYPE,
+    SET_TRACKS,
+    SET_NEW_RELEASES
 } from '../constants'
 
 const initialState = {
     modalVisible: true,
     searchTerm: '',
-    searchType: 'artist'
+    searchType: 'artist',
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -45,6 +47,12 @@ const rootReducer = (state = initialState, action) => {
     }
     if (action.type === SEARCH_TYPE) {
         return { ...state, searchType: action.data }
+    }
+    if (action.type === SET_TRACKS) {
+        return { ...state, tracks: action.data }
+    }
+    if(action.type === SET_NEW_RELEASES){
+      return { ...state, tracks: action.data }
     }
     return state
 }

@@ -9,13 +9,19 @@ export const ArtistsComponent = props => {
         return (
             <Row>
                 {artists.map((artist, index) => (
-                    <Col xs={24} sm={16} md={6} key={index}>
+                    <Col xs={24} md={8} key={index}>
                         <Card
                             size="small"
                             data-key={index}
-                            bordered={true}
+                            bordered={false}
                             actions={[
-                                <Icon size="small" type="eye" onClick={() => props.setCurrentArtist(artist)}/>,
+                                <Icon
+                                    size="small"
+                                    type="eye"
+                                    onClick={() =>
+                                        props.setCurrentArtist(artist)
+                                    }
+                                />,
                             ]}
                         >
                             <Skeleton loading={props.loading}>
@@ -30,9 +36,27 @@ export const ArtistsComponent = props => {
                                     }
                                     title={artist.name}
                                     description={
-                                        artist.genres[0]
-                                            ? artist.genres[0]
-                                            : 'N/A'
+                                        <ul>
+                                            <li>
+                                                <strong>Genre: </strong>
+                                                {artist.genres[0]
+                                                    ? artist.genres[0]
+                                                    : 'N/A'}
+                                            </li>
+                                            <li>
+                                                <strong>Followers: </strong>
+                                                <span
+                                                    className={
+                                                        artist.followers.total <
+                                                        100000
+                                                            ? 'tomato'
+                                                            : 'green'
+                                                    }
+                                                >
+                                                    {artist.followers.total}
+                                                </span>
+                                            </li>
+                                        </ul>
                                     }
                                 />
                             </Skeleton>
