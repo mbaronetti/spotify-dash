@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Progress } from 'antd'
+import { Card, Progress , Skeleton } from 'antd'
 import imgPlaceholder from '../../media/placeholder.gif'
 
 const { Meta } = Card
@@ -16,7 +16,7 @@ export const ArtistComponent = props => {
                     }
                 />
             }
-        >
+        ><Skeleton loading={props.loading}>
             <Meta
                 title={artist.name}
                 description={
@@ -52,6 +52,7 @@ export const ArtistComponent = props => {
                     </ul>
                 }
             />
+            </Skeleton>
         </Card>
     )
 }

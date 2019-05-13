@@ -103,8 +103,6 @@ export const getNewReleases = () => {
 
 export const getArtists = name => {
     return dispatch => {
-        dispatch(loadingArtists(true))
-        dispatch(onSearch(name))
         spotifyApi
             .searchArtists(name.length > 0 ? name : ' ', { limit: 50 })
             .then(response => {
@@ -119,7 +117,6 @@ export const getArtists = name => {
 
 export const getTracks = name => {
     return dispatch => {
-        dispatch(onSearch(name))
         spotifyApi
             .searchTracks(name.length > 0 ? name : ' ', { limit: 50 })
             .then(response => {
@@ -131,7 +128,11 @@ export const getTracks = name => {
 
 export const search = name => {
     return dispatch => {
-        dispatch(getArtists(name))
-        dispatch(getTracks(name))
+        dispatch(loadingArtists(true))
+        dispatch(onSearch(name))
+        setTimeout(() => {
+            dispatch(getArtists(name))
+            dispatch(getTracks(name))
+        }, 250)
     }
 }

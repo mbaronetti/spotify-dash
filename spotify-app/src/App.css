@@ -58,6 +58,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
     color: #aaa; }
+.spfy-app .ant-skeleton-content .ant-skeleton-title,
+.spfy-app .ant-skeleton-content .ant-skeleton-paragraph > li {
+  opacity: .15; }
 .spfy-app .sidebar-container h4 {
   color: #fff; }
 .spfy-app #logo {

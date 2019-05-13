@@ -88,6 +88,10 @@ main {
             color: #aaa;
         }
     }
+    .ant-skeleton-content .ant-skeleton-title, 
+    .ant-skeleton-content .ant-skeleton-paragraph > li {
+        opacity: .15;
+    }
     .sidebar-container {
         h4 {
             color: #fff;
