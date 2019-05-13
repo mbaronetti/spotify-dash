@@ -12,7 +12,7 @@
   background-color: #353b48; }
 
 .bg-dark-grey, body,
-main, aside {
+main, aside, .ant-card {
   background-color: #2f3640; }
 
 .App > .ant-layout {
@@ -29,8 +29,19 @@ ul {
     text-overflow: ellipsis;
     white-space: nowrap; }
 
+.search-container {
+  width: 24%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 25px; }
+
 .ant-layout-header {
-  height: auto; }
+  height: auto;
+  padding: 0 15px; }
+
+.ant-card-actions {
+  border-top: none;
+  background: none; }
 
 .ant-card-actions > li {
   margin: 0; }
@@ -47,19 +58,50 @@ header p {
   line-height: initial;
   height: initial; }
 
+.ant-card-meta-description,
+.ant-card-meta-title {
+  color: #fff;
+  font-weight: 400; }
+
 .ant-card-meta-description {
-  font-size: 0.9em;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+  color: #aaa; }
 
 .ant-card {
   margin: 5px;
   max-height: 85vh;
-  overflow: auto; }
+  border: none;
+  overflow: auto;
+  outline: 1px solid #ffffff0d; }
 
 .ant-card-body {
   padding: 5px; }
+
+.sidebar-container h4 {
+  color: #fff; }
+
+#logo {
+  display: inline-block;
+  width: 35px;
+  opacity: .5; }
+
+.sidebar-list {
+  padding: 0 15px;
+  font-size: 0.75em;
+  color: #aaa; }
+  .sidebar-list li {
+    margin: 4px 0; }
+    .sidebar-list li span {
+      display: block; }
+
+.ant-card-actions > li > span > .anticon {
+  color: #f1980f; }
+
+.ant-card-head {
+  color: #aaa;
+  border: none; }
 
 *::-webkit-scrollbar {
   width: 5px; }
@@ -71,7 +113,8 @@ header p {
   background-color: darkgrey;
   outline: 1px solid slategrey; }
 
-.now-playing-container, .now-playing-container * {
+.now-playing-container,
+.now-playing-container * {
   color: white; }
 
 /*# sourceMappingURL=App.css.map */

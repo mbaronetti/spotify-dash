@@ -97,7 +97,7 @@ export const getNowPlaying = () => {
 export const getNewReleases = () => {
     return dispatch => {
         spotifyApi
-            .getNewReleases()
+            .getNewReleases({limit:10})
             .then(data => {
                 console.log(data);
                 return dispatch(setNewReleases(data.albums))

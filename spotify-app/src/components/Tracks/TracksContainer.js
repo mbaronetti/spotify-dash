@@ -13,7 +13,7 @@ class TracksContainer extends Component {
     componentDidMount() {}
     render() {
         const { tracks , loading} = this.props
-        if (tracks && Array.isArray(tracks)) return <TracksComponent tracks={tracks} loading={loading} />
+        if (tracks) return <TracksComponent tracks={tracks} loading={loading} />
         return null
     }
 }

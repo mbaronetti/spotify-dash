@@ -3,6 +3,7 @@ $darkGrey: #2f3640;
 $grey: #353b48;
 $green: #2ecc71;
 $blue: #3498db;
+$orange: #f1980f;
 
 .tomato {
     color: tomato;
@@ -39,8 +40,19 @@ ul {
         white-space: nowrap;
     }
 }
+.search-container {
+    width: 24%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 25px;
+}
 .ant-layout-header {
     height: auto;
+    padding: 0 15px;
+}
+.ant-card-actions {
+    border-top: none;
+    background: none;
 }
 .ant-card-actions > li {
     margin: 0;
@@ -60,21 +72,54 @@ header {
         height: initial;
     }
 }
+.ant-card-meta-description,
+.ant-card-meta-title {
+    color: #fff;
+    font-weight: 400;
+}
 .ant-card-meta-description {
-    font-size: 0.9em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #aaa;
 }
 .ant-card {
     margin: 5px;
     max-height: 85vh;
+    border: none;
     overflow: auto;
+    @extend .bg-dark-grey;
+    outline: 1px solid #ffffff0d;
 }
 .ant-card-body {
     padding: 5px;
 }
-
+.sidebar-container {
+    h4{color: #fff}
+}
+#logo{
+  display: inline-block;
+  width: 35px;
+  opacity: .5;
+}
+.sidebar-list {
+    padding: 0 15px;
+    font-size: 0.75em;
+    color: #aaa;
+    li {
+        margin: 4px 0;
+        span {
+            display: block;
+        }
+    }
+}
+.ant-card-actions > li > span > .anticon {
+    color: $orange;
+}
+.ant-card-head {
+    color: #aaa;
+    border: none;
+}
 *::-webkit-scrollbar {
     width: 5px;
 }
@@ -87,6 +132,9 @@ header {
     background-color: darkgrey;
     outline: 1px solid slategrey;
 }
-.now-playing-container{
-  &,*{color: white}
+.now-playing-container {
+    &,
+    * {
+        color: white;
+    }
 }

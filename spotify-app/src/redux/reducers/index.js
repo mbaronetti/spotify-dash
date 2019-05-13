@@ -52,7 +52,7 @@ const rootReducer = (state = initialState, action) => {
         return { ...state, tracks: action.data }
     }
     if(action.type === SET_NEW_RELEASES){
-      return { ...state, tracks: action.data }
+      return { ...state, releases: action.data }
     }
     return state
 }

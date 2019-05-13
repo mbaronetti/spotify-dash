@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Spotify from 'spotify-web-api-js'
-//import logo from "./logo.svg";
+import logo from "./media/logo.png";
+import people from "./media/people.png";
 import { Modal, Button, Empty, Card } from 'antd'
 import SearchContainer from './components/Search/SearchContainer'
 import { Layout } from './components/Layout/Layout'
@@ -11,7 +12,7 @@ import TracksContainer from './components/Tracks/TracksContainer'
 import { Col, Row } from 'antd'
 import { connect } from 'react-redux'
 import { getHashParams, redirectToAuth } from './components/Helpers'
-import { showModal, getArtists, getNowPlaying , getNewReleases} from './redux/actions/index'
+import { showModal, getArtists, getNowPlaying } from './redux/actions/index'
 import './App.css'
 
 const spotifyApi = new Spotify()
@@ -21,7 +22,6 @@ const mapDispatchToProps = dispatch => {
         showModal: val => dispatch(showModal(val)),
         getArtists: name => dispatch(getArtists(name)),
         getNowPlaying: data => dispatch(getNowPlaying()),
-        getNewReleases: data => dispatch(getNewReleases())
     }
 }
 
@@ -46,7 +46,6 @@ class App extends Component {
     componentDidMount() {
         if (loggedIn) {
             spotifyApi.setAccessToken(accessToken)
-            this.props.getNewReleases();
         } else {
             redirectToAuth(true)
         }
@@ -56,14 +55,11 @@ class App extends Component {
         if (loggedIn)
             return (
                 <div className="App">
-                    <Layout header={<SearchContainer />}>
-                        {tracks && <Row />}
+                    <Layout header={<span><img src={logo} alt="logo" id="logo"/><SearchContainer /></span>}>
                         {artists && artists.length > 0 ? (
                             <Row>
                                 <Col xs={24} md={6}>
-                                    <Card
-                                        title="Tracks"
-                                    >
+                                    <Card title="Tracks">
                                         <TracksContainer />
                                     </Card>
                                 </Col>
@@ -71,15 +67,25 @@ class App extends Component {
                                     <ArtistContainer />
                                 </Col>
                                 <Col xs={24} md={14}>
-                                    <Card
-                                        title="Artists"
-                                    >
-                                    <ArtistsContainer />
-                                </Card>
+                                    <Card>
+                                        <ArtistsContainer />
+                                    </Card>
                                 </Col>
                             </Row>
                         ) : (
-                            <Empty />
+                            <Empty
+                                image={people}
+                                imageStyle={{
+                                    height: 'initial',
+                                    opacity: '.25'
+                                }}
+                                description={
+                                    <span style={{ color: '#fff', opacity: '.15' }}>
+                                        No data to display
+                                    </span>
+                                }
+                            >
+                            </Empty>
                         )}
                     </Layout>
                 </div>

@@ -7,7 +7,7 @@ import {
     onSearch,
     setSearchType,
     getTracks,
-    search
+    search,
 } from '../../redux/actions/index'
 
 const RadioGroup = Radio.Group
@@ -25,20 +25,34 @@ const mapDispatchToProps = dispatch => {
 const mapStateToProps = state => {
     return {
         searchType: state.searchType,
-        searchTerm: state.searchTerm
+        searchTerm: state.searchTerm,
     }
 }
 
 class SearchContainer extends Component {
     render() {
-        const { searchType, getArtists, setSearchType, getTracks , search , searchTerm} = this.props
+        const {
+            searchType,
+            getArtists,
+            setSearchType,
+            getTracks,
+            search,
+            searchTerm,
+        } = this.props
         return (
-            <div>
-                <SearchInput
-                    onChange={search}
-                />
-                <p style={{ color: '#fff' }}>
-                    Showing results for: <span style={{marginLeft: '5px'}}>{searchTerm}</span>
+            <div className="search-container">
+                <SearchInput size="small" onChange={search} />
+                <p style={{ color: '#aaa' }}>
+                    {searchTerm.length > 0 ? (
+                        <span>
+                            Showing results for:
+                            <span style={{ marginLeft: '5px' }}>
+                                {searchTerm}
+                            </span>
+                        </span>
+                    ) : (
+                        <span>Search by artist or song name</span>
+                    )}
                 </p>
             </div>
         )
