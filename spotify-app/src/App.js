@@ -58,7 +58,8 @@ class App extends Component {
                             </span>
                         }
                     >
-                        {artists || tracks ? (
+                        {(artists || tracks) &&
+                        (artists.length > 0 || tracks.length > 0) ? (
                             <Row>
                                 <Col xs={24} md={6}>
                                     <Card title="Tracks">

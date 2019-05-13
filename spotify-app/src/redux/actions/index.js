@@ -109,7 +109,7 @@ export const getArtists = name => {
                 const artists = response.artists.items
                 dispatch(loadingArtists(false))
                 dispatch(setCurrentArtist(artists[0]))
-                return dispatch(setArtists(artists))
+                dispatch(setArtists(artists))
             })
             .catch(e => console.log(e))
     }
@@ -120,7 +120,7 @@ export const getTracks = name => {
         spotifyApi
             .searchTracks(name.length > 0 ? name : ' ', { limit: 50 })
             .then(response => {
-                return dispatch(setTracks(response.tracks.items))
+              dispatch(setTracks(response.tracks.items))
             })
             .catch(e => console.log(e))
     }
