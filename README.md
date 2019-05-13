@@ -9,14 +9,15 @@ https://github.com/spotify/web-api-auth-examples
 
 ## Getting Started
 
-### 1) Create an App
+### 1) Set Up
+- Download this project
 - Visit https://developer.spotify.com/
 - Log in and create an app
 - Enter http//localhost:8888/callback as the redirect uri
 - Save your changes
 - Copy down the following information: Redirect uri, client id, client secret
 
-### 2)  Start Auth Server
+### 2)  Server-side setup (Auth)
 - Navigate to the auth-server directory `cd auth-server`
 - Install the dependencies `npm install`
 - Open auth-server/authorization_code/app.js
@@ -24,12 +25,12 @@ https://github.com/spotify/web-api-auth-examples
 - Paste in the redirect uri, client id, and client secret you copied in step 1
 - Run the Server `node authorization_code/app.js`
 
-### 3)  Start Client
+### 3)  Client-side setup
 - Navigate to the client directory `cd spotify-app`
 - Install the dependencies `npm install`
 - Run the Server `npm start`
 
-### 4)  Use the App
+### 4)  Run App
 - Visit http://localhost:3000
 - Click 'Log in with Spotify' and log in
 - Enjoy!
