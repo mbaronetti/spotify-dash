@@ -1,4 +1,4 @@
-# INTRO
+# heads-up
 This is a simple, easy-to-use and scalable React & Redux application consuming Spotify's API.
 It renders artists and tracks based on user's input, along with custom data.
 
