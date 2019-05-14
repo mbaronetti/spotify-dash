@@ -1,9 +1,8 @@
 # INTRO
-This is a simple and easy-to-use React & Redux application to navigate through users and tracks using Spotify's API.
-It renders a list of artists and tracks based on user's input, along with custom information such as 'User's Currently Playing Track'
+This is a simple, easy-to-use and scalable React & Redux application consuming Spotify's API.
+It renders artists and tracks based on user's input, along with custom information such as 'User's Currently Playing Track'
 
-There are two parts to it, the auth-server, and the client.
-
+There are two parts to it, the server (auth-server), and the client(spotify-app).
 
 ![alt text](https://github.com/mbaronetti/spotify-dash/blob/master/preview.png "Preview")
 
