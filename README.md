@@ -8,7 +8,7 @@ There are two parts to it, the server (auth-server), and the client(spotify-app)
 
 ## How to use
 
-### 1) Set Up
+### 1) Credentials Set Up
 - Download this project
 - Visit https://developer.spotify.com/
 - Log in and create an app
