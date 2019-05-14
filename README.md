@@ -4,10 +4,6 @@ It renders a list of artists and tracks based on user's input, along with custom
 
 There are two parts to it, the auth-server, and the client.
 
-For authentication, "web-api-auth-examples" was used.
-https://github.com/spotify/web-api-auth-examples
-For wrapping Spotify's API, "spotify-web-api-js" was used.
-https://doxdox.org/jmperez/spotify-web-api-js
 
 ![alt text](https://github.com/mbaronetti/spotify-dash/blob/master/preview.png "Preview")
 
@@ -39,3 +35,10 @@ https://doxdox.org/jmperez/spotify-web-api-js
 - Click 'Log in with Spotify' and log in
 - To see 'User's Currently Playing Track' in action, open Spotify and play a song.
 - Enjoy!
+
+## Credits
+For authentication, "web-api-auth-examples" was used.
+https://github.com/spotify/web-api-auth-examples
+
+For wrapping Spotify's API, "spotify-web-api-js" was used.
+https://doxdox.org/jmperez/spotify-web-api-js
