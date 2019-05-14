@@ -38,3 +38,7 @@ https://github.com/spotify/web-api-auth-examples
 - To see 'User's Currently Playing Track' in action, open Spotify and play a song.
 - Enjoy!
 
+"web-api-auth-examples" was used for simplifying authentication process.
+https://github.com/spotify/web-api-auth-examples
+"spotify-web-api-js" was used for wrapping Spotify's API.
+https://doxdox.org/jmperez/spotify-web-api-js
