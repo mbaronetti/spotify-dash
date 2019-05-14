@@ -1,6 +1,6 @@
 # INTRO
 This is a simple, easy-to-use and scalable React & Redux application consuming Spotify's API.
-It renders artists and tracks based on user's input, along with custom information such as 'User's Currently Playing Track'
+It renders artists and tracks based on user's input, along with custom data.
 
 There are two parts to it, the server (auth-server), and the client(spotify-app).
 
