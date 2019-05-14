@@ -6,7 +6,6 @@ There are two parts to it, the auth-server, and the client.
 
 For authentication, "web-api-auth-examples" was used.
 https://github.com/spotify/web-api-auth-examples
-
 For wrapping Spotify's API, "spotify-web-api-js" was used.
 https://doxdox.org/jmperez/spotify-web-api-js
 
