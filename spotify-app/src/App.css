@@ -61,8 +61,10 @@
 .spfy-app .ant-skeleton-content .ant-skeleton-title,
 .spfy-app .ant-skeleton-content .ant-skeleton-paragraph > li {
   opacity: .15; }
-.spfy-app .sidebar-container h4 {
-  color: #fff; }
+.spfy-app .sidebar-container {
+  padding: 10px; }
+  .spfy-app .sidebar-container h4 {
+    color: #fff; }
 .spfy-app #logo {
   display: inline-block;
   width: 35px;
@@ -75,9 +77,11 @@
     margin: 4px 0; }
     .spfy-app .sidebar-list li span {
       display: block; }
-.spfy-app .now-playing-container,
-.spfy-app .now-playing-container * {
-  color: white; }
+.spfy-app .now-playing-container {
+  padding: 10px; }
+  .spfy-app .now-playing-container,
+  .spfy-app .now-playing-container * {
+    color: white; }
 
 .tomato {
   color: tomato !important; }
