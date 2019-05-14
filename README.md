@@ -19,8 +19,7 @@ There are two parts to it, the server (auth-server), and the client(spotify-app)
 ### 2)  Server-side setup (Auth)
 - Navigate to the auth-server directory `cd auth-server`
 - Install the dependencies `npm install`
-- Open auth-server/authorization_code/app.js in your editor
-- Go to line 16
+- Open auth-server/authorization_code/app.js in your editor and focus on line 16
 - Paste in the redirect uri, client id, and client secret you copied in step 1
 - Run the Server `node authorization_code/app.js`
 
