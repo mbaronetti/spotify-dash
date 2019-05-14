@@ -7,6 +7,8 @@ There are two parts to it, the auth-server, and the client.
 For authentication, "web-api-auth-examples" was used.
 https://github.com/spotify/web-api-auth-examples
 
+![alt text](https://github.com/mbaronetti/spotify-dash/blob/master/preview.png "Preview")
+
 ## How to use
 
 ### 1) Set Up
@@ -36,4 +38,3 @@ https://github.com/spotify/web-api-auth-examples
 - To see 'User's Currently Playing Track' in action, open Spotify and play a song.
 - Enjoy!
 
-![alt text](https://github.com/mbaronetti/spotify-dash/blob/master/preview.png "Preview")
