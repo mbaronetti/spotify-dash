@@ -7,6 +7,9 @@ There are two parts to it, the auth-server, and the client.
 For authentication, "web-api-auth-examples" was used.
 https://github.com/spotify/web-api-auth-examples
 
+For wrapping Spotify's API, "spotify-web-api-js" was used.
+https://doxdox.org/jmperez/spotify-web-api-js
+
 ![alt text](https://github.com/mbaronetti/spotify-dash/blob/master/preview.png "Preview")
 
 ## How to use
@@ -37,8 +40,3 @@ https://github.com/spotify/web-api-auth-examples
 - Click 'Log in with Spotify' and log in
 - To see 'User's Currently Playing Track' in action, open Spotify and play a song.
 - Enjoy!
-
-"web-api-auth-examples" was used for simplifying authentication process.
-https://github.com/spotify/web-api-auth-examples
-"spotify-web-api-js" was used for wrapping Spotify's API.
-https://doxdox.org/jmperez/spotify-web-api-js
