@@ -7,7 +7,7 @@ import App from './App'
 import * as serviceWorker from './serviceWorker'
 
 window.store = store
-//store.subscribe(() => console.log(store.getState()))
+store.subscribe(() => console.log(store.getState()))
 
 ReactDOM.render(
     <Provider store={store}>

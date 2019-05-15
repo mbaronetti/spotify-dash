@@ -9,7 +9,6 @@ const mapStateToProps = state => {
     }
 }
 class ArtistContainer extends Component {
-    componentDidMount() {}
     render() {
         const { currentArtist , loading} = this.props
         if (currentArtist) return <ArtistComponent artist={currentArtist} loading={loading}/>

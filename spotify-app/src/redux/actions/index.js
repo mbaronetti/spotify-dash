@@ -12,6 +12,8 @@ import {
     SET_NEW_RELEASES,
 } from '../constants'
 import Spotify from 'spotify-web-api-js'
+import { debounce } from '../../components/Helpers'
+
 
 const spotifyApi = new Spotify()
 
@@ -120,19 +122,14 @@ export const getTracks = name => {
         spotifyApi
             .searchTracks(name.length > 0 ? name : ' ', { limit: 50 })
             .then(response => {
-              dispatch(setTracks(response.tracks.items))
+                dispatch(setTracks(response.tracks.items))
             })
             .catch(e => console.log(e))
     }
 }
-
 export const search = name => {
     return dispatch => {
         dispatch(loadingArtists(true))
         dispatch(onSearch(name))
-        setTimeout(() => {
-            dispatch(getArtists(name))
-            dispatch(getTracks(name))
-        }, 250)
     }
 }

@@ -2,21 +2,16 @@ import React, { Component } from 'react'
 //import logo from "./logo.svg";
 import { Input } from 'antd'
 import { connect } from 'react-redux'
-import {
-    getArtists,
-    setSearchType,
-    getTracks,
-    search,
-} from '../../redux/actions/index'
+import debounce from 'lodash/debounce'
+import { getArtists, getTracks, search } from '../../redux/actions/index'
 
 const SearchInput = Input.Search
 
 const mapDispatchToProps = dispatch => {
     return {
-        getArtists: e => dispatch(getArtists(e.target.value)),
-        getTracks: e => dispatch(getTracks(e.target.value)),
-        setSearchType: e => dispatch(setSearchType(e.target.value)),
-        search: e => dispatch(search(e.target.value)),
+        getArtists: value => dispatch(getArtists(value)),
+        getTracks: value => dispatch(getTracks(value)),
+        search: value => dispatch(search(value)),
     }
 }
 
@@ -28,14 +23,25 @@ const mapStateToProps = state => {
 }
 
 class SearchContainer extends Component {
+    componentDidMount() {
+        this.searchResuts = debounce(this.searchResuts, 500)
+    }
+    handleSearch = e => {
+      const value = e.target.value;
+        this.props.search(value)
+        this.searchResuts(value)
+    }
+
+    searchResuts = text => {
+        const { searchTerm } = this.props
+        this.props.getArtists(searchTerm)
+        this.props.getTracks(searchTerm)
+    }
     render() {
-        const {
-            search,
-            searchTerm,
-        } = this.props
+        const { search, searchTerm } = this.props
         return (
             <div className="search-container">
-                <SearchInput size="small" onChange={search} />
+                <SearchInput size="small" onChange={this.handleSearch} />
                 <p style={{ color: '#aaa' }}>
                     {searchTerm.length > 0 ? (
                         <span>
