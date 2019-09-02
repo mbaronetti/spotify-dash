@@ -1,10 +1,10 @@
+![alt text](https://raw.githubusercontent.com/mbaronetti/mf_hooks/master/scr.png "Preview")
+
 # heads-up
 This is a simple, easy-to-use and scalable React & Redux application consuming Spotify's API.
 It renders artists and tracks based on user's input, along with custom data.
 
 There are two parts to it, the server (auth-server), and the client(spotify-app).
-
-![alt text](https://raw.githubusercontent.com/mbaronetti/mf_hooks/master/scr.png "Preview")
 
 ## How to use
 
