@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/mbaronetti/mf_hooks/master/scr.png "Preview")
+![alt text](https://raw.githubusercontent.com/mbaronetti/spotify-dash/master/preview.png "Preview")
 
 # heads-up
 This is a simple, easy-to-use and scalable React & Redux application consuming Spotify's API.
