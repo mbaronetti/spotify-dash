@@ -4,7 +4,7 @@ It renders artists and tracks based on user's input, along with custom data.
 
 There are two parts to it, the server (auth-server), and the client(spotify-app).
 
-![alt text](https://github.com/mbaronetti/spotify-dash/blob/master/preview.png "Preview")
+![alt text](https://raw.githubusercontent.com/mbaronetti/mf_hooks/master/scr.png "Preview")
 
 ## How to use
 
